@@ -9,7 +9,7 @@
 
 ### Properties
 #### actions
-- A list of Widgets to display in a row after the title widget. [...]
+- A list of Widgets to display in a row after the title widget.
 #### title
 - The primary widget displayed in the app bar.
 
@@ -29,3 +29,14 @@ AppBar(
     ],
 )
 ```
+## Container
+- The same ***div*** in HTML
+### Properties
+#### alignment
+- Align the child within the container. 
+#### child
+- The child contained by the container.
+#### decoration
+- The decoration to paint behind the child
+#### foreDecoration
+- The decoration to paint in font of the child
