@@ -3,13 +3,10 @@
 ## The difference between stateFul widget and stateLess widget
 | stateLessWidget | stateFulWidget |
 | :-- | :-- |
-| Stateless Widgets are static widgets.
-They do not depend on any data change or any behavior change.
-Stateless Widgets do not have a state, they will be rendered once and will not update themselves, but will only be updated when external data changes.
-For Example: Text, Icon, RaisedButton are Stateless Widgets.  | Stateful Widgets are dynamic widgets.
-They can be updated during runtime based on user action or data change.
-Stateful Widgets have an internal state and can re-render if the input data changes or if Widget’s state changes.
-For Example: Checkbox, Radio Button, Slider are Stateful Widgets |
+| Stateless Widgets are static widgets. | Stateful Widgets are dynamic widgets.|
+| They do not depend on any data change or any behavior change. | They can be updated during runtime based on user action or data change.|
+| Stateless Widgets do not have a state, they will be rendered once and will not update themselves, but will only be updated when external data changes. | Stateful Widgets have an internal state and can re-render if the input data changes or if Widget’s state changes. |
+| For Example: Text, Icon, RaisedButton are Stateless Widgets.  | For Example: Checkbox, Radio Button, Slider are Stateful Widgets |
 
 ## AppBar 
 - Thanh menu được hiện thị trên cùng gồm các thanh công cụ và các tiện ích khác
