@@ -1,5 +1,12 @@
 # Flutter
 
+## Cách thức hoạt động của Consumer
+- Consumer sẽ dùng method builder thay vì chỉ là object child. Builder cần chính xác 3 tham số là BuildContext,  category data và sau đó là một Widget.‌‌
+- Consumer là generic type vì vậy chúng ta phải chỉ định loại dữ liệu nào chúng ta muốn sử dụng. Trong trường hợp của này, ta đang sử dụng dữ liệu từ CategoryProvider do đó chúng mình sẽ viết Consumer<CategoryProvider>(...).‌‌
+- Bạn có thể so sánh điều này với Provider.of<...>(context) vì cả hai đều thiết lập active listener đối với provider và kích hoạt hàm build khi dữ liệu thay đổi.‌‌
+Builder sẽ nhận BuildContext mà chúng ta cung cấp bằng cách sử dụng context có sẵn bên trong widget của chúng ta.‌‌
+- Nó cũng nhận được instance dữ liệu. Giống như trong trường hợp trên, chúng ta nhận được snapshot dữ liệu mới nhất từ ​​CategoryProvider có tên biến là categoryData.‌‌
+
 ## The difference between stateFul widget and stateLess widget
 | stateLessWidget | stateFulWidget |
 | :-- | :-- |
