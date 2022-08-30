@@ -1,5 +1,13 @@
 # Flutter
 
+## The difference between Provider and Bloc
+### Provider pattern
+- ***ChangeNotifier***: ChangeNotifier can be understood as a class extended by other classes to provide notification if there is any change in the data of the class.
+- ***ChangeNotifierProvider***: ChangeNotifierProvider can be understood as a parent widget holding the reference of ChangeNotifier, which is responsible for rendering within the UI the changes that happened in ViewModel class data.
+- ***Consumer***: Consumer can be understood as a widget holding the reference of ViewModel Class that continually listens for any changes and rebuilds the child widget over which it has been wrapped.
+> https://medium.com/swlh/the-differences-between-provider-pattern-and-bloc-pattern-fc93dc523672
+
+
 ## Cách thức hoạt động của Consumer
 - Consumer sẽ dùng method builder thay vì chỉ là object child. Builder cần chính xác 3 tham số là BuildContext,  category data và sau đó là một Widget.‌‌
 - Consumer là generic type vì vậy chúng ta phải chỉ định loại dữ liệu nào chúng ta muốn sử dụng. Trong trường hợp của này, ta đang sử dụng dữ liệu từ CategoryProvider do đó chúng mình sẽ viết Consumer<CategoryProvider>(...).‌‌
