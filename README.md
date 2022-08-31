@@ -5,6 +5,18 @@
 - ***ChangeNotifier***: ChangeNotifier can be understood as a class extended by other classes to provide notification if there is any change in the data of the class.
 - ***ChangeNotifierProvider***: ChangeNotifierProvider can be understood as a parent widget holding the reference of ChangeNotifier, which is responsible for rendering within the UI the changes that happened in ViewModel class data.
 - ***Consumer***: Consumer can be understood as a widget holding the reference of ViewModel Class that continually listens for any changes and rebuilds the child widget over which it has been wrapped.
+
+### BLoC pattern (BLoC - Business Logic Component)
+- It mean we've two classes
+    - Contain all the UI components in the front end
+    - The BLoC class which have all the business logic and data preparation
+- The prerequisites for dealing with the Bloc pattern
+    - Sinks and streams
+    - RxDart
+    - StreamBuilder
+- The difference between the **StreamBuilder in Bloc** and **Consumer in Provider**
+    - StreamBuilder listens to **the stream and fetches the model** on every change to rebuild the widget
+    - Consumer listens as soon as **notifyListeners()** executes inside the provider class
 > https://medium.com/swlh/the-differences-between-provider-pattern-and-bloc-pattern-fc93dc523672
 
 
