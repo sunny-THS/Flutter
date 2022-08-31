@@ -1,5 +1,8 @@
 # Flutter
 
+## GestureDetector widget
+> https://blog.logrocket.com/handling-gestures-flutter-gesturedetector/
+
 ## The difference between Provider and Bloc
 ### Provider pattern
 - ***ChangeNotifier***: ChangeNotifier can be understood as a class extended by other classes to provide notification if there is any change in the data of the class.
