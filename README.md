@@ -1,5 +1,19 @@
 # Flutter
 
+## BuildContext
+- ***reference***
+> https://viblo.asia/p/hoc-flutter-tu-co-ban-den-nang-cao-phan-3-lot-tran-co-nang-flutter-buildcontext-la-gi-bWrZnmdbKxw
+
+## Key
+- A Key is ***an identifier*** for Widgets, Elements
+    - Local Key
+        - UniqueKey
+        - ValueKey(value)
+        - ObjectKey(value)
+    - Global Key
+### Widget tree & element tree
+> https://viblo.asia/p/hoc-flutter-tu-co-ban-den-nang-cao-phan-6-key-la-gi-co-mo-khoa-trai-tim-nang-duoc-khong-ORNZqk4q50n
+
 ## GestureDetector widget
 > https://blog.logrocket.com/handling-gestures-flutter-gesturedetector/
 
@@ -37,6 +51,7 @@ Builder sẽ nhận BuildContext mà chúng ta cung cấp bằng cách sử dụ
 | They do not depend on any data change or any behavior change. | They can be updated during runtime based on user action or data change.|
 | Stateless Widgets do not have a state, they will be rendered once and will not update themselves, but will only be updated when external data changes. | Stateful Widgets have an internal state and can re-render if the input data changes or if Widget’s state changes. |
 | For Example: Text, Icon, RaisedButton are Stateless Widgets.  | For Example: Checkbox, Radio Button, Slider are Stateful Widgets |
+> https://viblo.asia/p/hoc-flutter-tu-co-ban-den-nang-cao-phan-2-statefulwidget-vs-statelesswidget-khi-nao-thi-can-su-dung-cai-nao-ORNZq12rZ0n
 
 ## AppBar 
 - Thanh menu được hiện thị trên cùng gồm các thanh công cụ và các tiện ích khác
