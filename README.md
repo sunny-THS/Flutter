@@ -1,6 +1,41 @@
 # Flutter
 
-## Thiết kết Youtube Kids
+## Platform channels
+Messages are passed between the ***client(UI)*** and ***host(platform)*** using flatform channels as illustrated in this diagram:
+![image](https://docs.flutter.dev/assets/images/docs/PlatformChannels.png "Platform channels")
+### Calling platform-specific Android
+- Flutter
+```dart
+static const CHANNEL_NAME = MethodChannel('com.example.show_toast');
+...
+final int showtoast = await CHANNEL_NAME
+        .invokeMethod('showToast', <String, String>{'msg': 'Hello word'});
+```
+- Android
+```kotlin
+private val CHANNEL = "com.example.show_toast"
+private lateinit var channel: MethodChannel
+
+override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+    super.configureFlutterEngine(flutterEngine)
+
+    channel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL)
+
+    channel.setMethodCallHandler { call, result ->
+        var arg = call.arguments as Map<String, String>
+        var msg = arg["msg"]
+
+        if (call.method == "showToast") {
+            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+        }
+    }
+}
+```
+> https://docs.flutter.dev/development/platform-integration/platform-channels?tab=android-channel-java-tab#channels-and-platform-threading
+### Using pigeon 
+> https://pub.dev/packages/pigeon
+
+## Thiết kế DINO Kids
 ### Hình ảnh tham khảo UI
 ![image](https://cdn.dribbble.com/users/257709/screenshots/16240668/media/be24ace29c5b46f5e29d09d8bf0c81ae.png "image")
 
