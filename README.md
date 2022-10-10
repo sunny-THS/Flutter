@@ -1,5 +1,23 @@
 # Flutter
 
+## Architecture Pattern
+### MVC (Model—View—Controller)
+- Model: This component stores the application data. It has no knowledge about the interface. The model is responsible for handling the domain logic(real-world business rules) and communication with the database and network layers.
+- View: It is the UI(User Interface) layer that holds components that are visible on the screen. Moreover, it provides the visualization of the data stored in the Model and offers interaction to the user.
+- Controller: This component establishes the relationship between the View and the Model. It contains the core application logic and gets informed of the user’s response and updates the Model as per the need.
+<br/>
+![image](https://media.geeksforgeeks.org/wp-content/uploads/20201002214740/MVCSchema.png "MVC")
+
+### MVP (Model—View—Presenter)
+- Model: Layer for storing data. It is responsible for handling the domain logic(real-world business rules) and communication with the database and network layers.
+- View: UI(User Interface) layer. It provides the visualization of the data and keep a track of the user’s action in order to notify the Presenter.
+- Presenter: Fetch the data from the model and applies the UI logic to decide what to display. It manages the state of the View and takes actions according to the user’s input notification from the View.
+<br/>
+![image](https://media.geeksforgeeks.org/wp-content/uploads/20201024233154/MVPSchema.png "MVP")
+
+### Example 
+> https://viblo.asia/p/mvp-pattern-trong-android-naQZRA4vKvx
+
 ## Platform channels
 Messages are passed between the ***client(UI)*** and ***host(platform)*** using flatform channels as illustrated in this diagram:
 ![image](https://docs.flutter.dev/assets/images/docs/PlatformChannels.png "Platform channels")
